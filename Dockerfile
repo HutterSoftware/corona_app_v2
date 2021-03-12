@@ -11,6 +11,7 @@ RUN apt install php7.3-fpm -y
 RUN apt install php7.3-xml -y
 RUN apt install php-mysql -y
 RUN apt install vim -y
+RUN apt install mariadb-server -y
 
 RUN mkdir /etc/nginx/snippets/
 

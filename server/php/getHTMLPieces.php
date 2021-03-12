@@ -17,4 +17,9 @@ function getImportantHeader() {
   echo "<link href=\"/css/main-style.css\" rel=\"stylesheet\" type=\"text/css\">";
 }
 
+function getReportForm($uid) {
+  // TODO: Check rights
+  echo file_get_contents("./html/report-form.html");
+}
+
 ?>

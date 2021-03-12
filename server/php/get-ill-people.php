@@ -1,0 +1,7 @@
+<?php
+
+// TODO: Check rights
+
+
+
+ ?>
