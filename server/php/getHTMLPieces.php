@@ -11,4 +11,10 @@ function getSuccesfullyNotification() {
   echo "</script>";
 }
 
+function getImportantHeader() {
+  echo "<meta charset=\"utf-8\">";
+  echo "<title>Corona App V2</title>";
+  echo "<link href=\"/css/main-style.css\" rel=\"stylesheet\" type=\"text/css\">";
+}
+
 ?>

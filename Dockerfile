@@ -1,6 +1,6 @@
 FROM nginx:stable-perl as corona_app_v2
 MAINTAINER "Benedikt Hutter<benedikt.hutter5@gmail.com>"
-EXPOSE 80
+EXPOSE 443
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 
@@ -24,6 +24,7 @@ COPY server-configuration/fastcgi.conf /etc/nginx/
 COPY server-configuration/fastcgi-php.conf /etc/nginx/snippets
 COPY server-configuration/default.conf /etc/nginx/conf.d/
 COPY server-configuration/php.ini /etc/php/7.3/fpm/
+COPY server-configuration/corona* /etc/ssl/
 
 COPY . .
 RUN chmod +x docker-entrypoint.sh

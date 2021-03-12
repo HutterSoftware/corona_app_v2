@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    <meta charset="utf-8">
-    <title>Corona App V2</title>
-    <link href="/css/main-style.css" rel="stylesheet" type="text/css">
+    <?php
+
+    include "./php/getHTMLPieces.php";
+    getImportantHeader();
+
+     ?>
   </head>
   <body>
     <?php
-      include getcwd() . "/php/getHTMLPieces.php";
       getHeader();
     ?>
 
