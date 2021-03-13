@@ -9,6 +9,10 @@ function getHeader() {
     echo "<div class=\"controls headerElement\">";
     echo "<div><a href=\"/php/logout.php\">Logout</a></div>";
     echo "</div>";
+  } else {
+    echo "<div class=\"controls headerElement\">";
+    echo "<div><a href=\"/php/login.php\">Login</a></div>";
+    echo "</div>";
   }
   echo "<div class=\"controls headerElement\"><a href=\"/\">Homepage</a></div>";
   echo "</div>";

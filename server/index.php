@@ -19,8 +19,11 @@
      ?>
 
      <div id="content">
+       <div id="user-id">
+
+       </div>
        <div id="tracking-option">
-           <input id="track-button" type="checkbox" class="tracking-state-elements" onchange="changeTrackingState()">
+           <input id="track-button" type="checkbox" checked="unchecked" class="tracking-state-elements" onchange="changeTrackingState()">
          <label id="tracking-state-info" for="track-button" class="tracking-state-elements">
            Tracking is disabled
          </label>

@@ -1,4 +1,5 @@
 var WARNING_CONTENT_ELEMENT_ID = "warning-content";
+var WARNING_LEVEL_TOP_NOTIFICATION = "Coronat test is positiv";
 var WARNING_LEVEL_1_NOTIFICATION = "Kein Warnung";
 var WARNING_LEVEL_2_NOTIFICATION = "Es bestand eine Näherung mit einer " +
                                    "infizierten Person bei einer Distanz von " +
@@ -19,6 +20,10 @@ function printNotification(warningLevel) {
   var notificationElement = document.getElementById(WARNING_CONTENT_ELEMENT_ID);
 
   switch (warningLevel) {
+    case "0": // Corona test is positiv
+      notificationElement.innerText = WARNING_LEVEL_TOP_NOTIFICATION;
+      break;
+
     case "1": // No warning
       notificationElement.innerText = WARNING_LEVEL_1_NOTIFICATION;
       audioFile = "";
