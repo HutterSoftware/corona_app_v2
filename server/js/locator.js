@@ -1,8 +1,10 @@
+var watchDogId;
+var state = false;
+
 function getPosition(position) {
   var longitude = position.coords.longitude;
   var latitude = position.coords.latitude;
   var timestamp = position.timestamp;
-  // TODO: Write to database
   var requester = new XMLHttpRequest();
   requester.onreadystatechange = function() {
     if (this.readyState === 4) {
@@ -21,4 +23,12 @@ function getPosition(position) {
   requester.send(data);
 }
 
-var watchDog = navigator.geolocation.watchPosition(getPosition);
+function changeTrackingState() {
+  if (!state) {
+    watchDogId = navigator.geolocation.watchPosition(getPosition);
+    document.getElementById("tracking-state-info").innerText = "Tracking is enabled";
+  } else {
+    navigator.geolocation.clearWatch(watchDogId);
+    document.getElementById("tracking-state-info").innerText = "Tracking is disabled";
+  }
+}

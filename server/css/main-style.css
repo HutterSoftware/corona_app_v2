@@ -14,7 +14,7 @@ h1 {
   height: 120px;
 }
 
-#controls {
+.controls {
   text-align: right;
   width: 10%;
 }
@@ -29,4 +29,15 @@ h1 {
 
 .small-skip {
   margin-bottom: 30px;
+}
+
+.tracking-state-elements {
+  float: left;
+  height: 40px;
+  vertical-align: middle;
+  line-height: 40px;
+}
+
+#tracking-option {
+  height: 40px;
 }

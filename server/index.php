@@ -7,29 +7,27 @@
     getImportantHeader();
 
      ?>
+
+     <script src="/js/notifier.js"></script>
+     <script src="/js/locator.js"></script>
   </head>
   <body>
     <?php
-      getHeader();
-    ?>
 
-    <div id="content">
-      <form action="php/login.php" method="post">
-        <div>
-          <label class="login-element" for="username">Username</label>
-          <input id="username" class="login-element small-skip" name="username">
-        </div>
-        <div>
-          <label class="login-element" for="password">Password</label>
-          <input id="password" class="login-element small-skip" name="password" type="password">
-        </div>
-        <div>
-          <button class="small-skip">Anmelden</button>
-        </div>
-        </div>
-      </form>
-      <div>
-        <a href="/register.php">Registrieren</a>
+    getHeader();
+
+     ?>
+
+     <div id="content">
+       <div id="tracking-option">
+           <input id="track-button" type="checkbox" class="tracking-state-elements" onchange="changeTrackingState()">
+         <label id="tracking-state-info" for="track-button" class="tracking-state-elements">
+           Tracking is disabled
+         </label>
+      </div>
+      <br>
+      <div id="warning-content">
+        You must enable tracking to get warnings
       </div>
     </div>
   </body>
