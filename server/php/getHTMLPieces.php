@@ -7,11 +7,11 @@ function getHeader() {
   echo "</div>";
   if (isset($_COOKIE["corona_app_v2-uid"])) {
     echo "<div class=\"controls headerElement\">";
-    echo "<div><a href=\"/php/logout.php\">Logout</a></div>";
+    echo "<div><a href=\"/php/logout.php\" target=\"_blank\">Logout</a></div>";
     echo "</div>";
   } else {
     echo "<div class=\"controls headerElement\">";
-    echo "<div><a href=\"/php/login.php\">Login</a></div>";
+    echo "<div><a href=\"/php/login.php\" target=\"_blank\">Login</a></div>";
     echo "</div>";
   }
   echo "<div class=\"controls headerElement\"><a href=\"/\">Startseite</a></div>";
