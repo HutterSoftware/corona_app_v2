@@ -13,7 +13,7 @@ var WARNING_LEVEL_2_RECOMMENDATION = "Wenn Sie sich jetzt schlechter oder in " +
 
 var WARNING_LEVEL_3_NOTIFICATION = "Ihr Test war positiv";
 var WARNING_LEVEL_3_COLOR = "red";
-var WARNING_LEVEL_3_RECOMMENDATION = "Bleiben Sie solange zu Hause bis die " +
+var WARNING_LEVEL_3_RECOMMENDATION = "Bleiben Sie so lange zu Hause bis die " +
                                     "häusliche Quarantäne vom Gesundheitsamt " +
                                     "aufgehoben wird.";
 
