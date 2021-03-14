@@ -34,7 +34,7 @@ foreach ($serverList as $server) {
   }
 }
 
-$moveProfile = array_unique($moveProfile);
+$moveProfile = array_map("unserialize", array_unique(array_map("serialize", $moveProfile)));
 $potentialPeople = array();
 
 foreach($serverList as $server) {
@@ -54,7 +54,7 @@ foreach($serverList as $server) {
   }
 }
 
-$potentialPeople = array_unique($potentialPeople);
+$potentialPeople = array_map("unserialize", array_unique(array_map("serialize", $potentialPeople)));
 $listOfWarnedPeople = array();
 
 foreach ($potentialPeople as $people) {
@@ -63,17 +63,15 @@ foreach ($potentialPeople as $people) {
   foreach($moveProfile as $profile) {
     $latitude2 = $profile[2];
     $longitude2 = $profile[1];
-    echo distance($latitude1, $longitude1, $latitude2, $longitude2)*1000 . "  1.5<br>";
-    if (distance($latitude1, $longitude1, $latitude2, $longitude2) * 1000 < 1000.5) {
+    if (distance($latitude1, $longitude1, $latitude2, $longitude2) * 1000 < 1.5) {
       if (!in_array($profile[0], $listOfWarnedPeople)) {
-        $statementString = "update app_user set health_state = 2 where " .
+        $statementString = "update app_user set health_state = 2, change_date = CURRENT_TIMESTAMP where " .
         "idapp_user = ?";
         echo $profile[0];
         $statement = $connection->prepare($statementString);
         $statement->bind_param("i", $people[0]);
         $statement->execute();
         array_push($listOfWarnedPeople, $people[0]);
-        echo "<br>3wf";
       }
     }
   }
