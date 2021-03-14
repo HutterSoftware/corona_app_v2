@@ -67,7 +67,6 @@ foreach ($potentialPeople as $people) {
       if (!in_array($profile[0], $listOfWarnedPeople)) {
         $statementString = "update app_user set health_state = 2, change_date = CURRENT_TIMESTAMP where " .
         "idapp_user = ?";
-        echo $profile[0];
         $statement = $connection->prepare($statementString);
         $statement->bind_param("i", $people[0]);
         $statement->execute();

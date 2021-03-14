@@ -19,7 +19,7 @@ $statement->bind_param("i", $_POST["app-user-id"]);
 
 if ($statement->execute()) {
   include "set-corona-warnings.php";
-  header("Location: /overview.php", 200);
+  header("Location: /overview.php?report=1", 200);
 } else {
   header("Location: /overview.php", 200);
 }
