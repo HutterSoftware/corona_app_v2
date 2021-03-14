@@ -63,7 +63,7 @@ foreach ($potentialPeople as $people) {
   foreach($moveProfile as $profile) {
     $latitude2 = $profile[2];
     $longitude2 = $profile[1];
-    if (distance($latitude1, $longitude1, $latitude2, $longitude2) * 1000 < 1.5) {
+    if (distance($latitude1, $longitude1, $latitude2, $longitude2) * 1000 < 3000) {
       if (!in_array($profile[0], $listOfWarnedPeople)) {
         $statementString = "update app_user set health_state = 2, change_date = CURRENT_TIMESTAMP where " .
         "idapp_user = ?";

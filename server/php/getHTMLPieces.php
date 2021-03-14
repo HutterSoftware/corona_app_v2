@@ -14,13 +14,13 @@ function getHeader() {
     echo "<div><a href=\"/php/login.php\">Login</a></div>";
     echo "</div>";
   }
-  echo "<div class=\"controls headerElement\"><a href=\"/\">Homepage</a></div>";
+  echo "<div class=\"controls headerElement\"><a href=\"/\">Startseite</a></div>";
   echo "</div>";
 }
 
 function getSuccesfullyNotification() {
   echo "<script>";
-  echo "alert(\"Registration was successully!\");";
+  echo "alert(\"Ihre Registrierung war erfolgreich!\");";
   echo "window.location.href=\"/\";";
   echo "</script>";
 }

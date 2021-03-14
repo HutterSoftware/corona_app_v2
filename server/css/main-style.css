@@ -1,5 +1,6 @@
 body {
   font-family: sans-serif;
+  background-color: #c4c4c4;
 }
 
 h1 {
@@ -12,6 +13,11 @@ h1 {
 
 #header {
   height: 120px;
+}
+
+#header, #content {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .controls {
@@ -33,11 +39,27 @@ h1 {
 
 .tracking-state-elements {
   float: left;
-  height: 40px;
-  vertical-align: middle;
+  height: 50px;
   line-height: 40px;
+  margin: 30px;
+  margin-left: 45px;
 }
 
 #tracking-option {
+  height: 110px;
+}
+
+td, th {
+  text-align: left;
+  padding: 10px;
+}
+
+.id-label {
+  float: left;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+#user-id {
   height: 40px;
 }

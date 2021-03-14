@@ -37,7 +37,6 @@
         }
 
          ?>
-      </div>
       <div id="table-of-ill-people">
         <?php
 
@@ -46,7 +45,10 @@
             $result = getIllPeople();
             echo "<table><tr><th>Appnutzer Insgesamt</th><td>" .
               $result["number-of-appuser"] . "</td></tr><tr><th>Erkrankte " .
-              "Appnutzer</th><td>" . $result["number-of-ill-people"];
+              "Appnutzer</th><td>" . $result["number-of-ill-people"] .
+              "</td></tr><tr><th>Prozentuell Erkrankte</th><td>" .
+              $result["number-of-ill-people"] / $result["number-of-appuser"] * 100 .
+              "%</td></tr></table>";
           }
 
          ?>
@@ -56,9 +58,9 @@
 
      if (isset($_GET["report"])) {
        if ($_GET["report"] == 1) {
-         echo "<script>alert(\"Sick notification was successfull\");</script>";
+         echo "<script>alert(\"Krankmeldung konnte erfolgreich abgesetzt werden\");</script>";
        } else {
-         echo "<script>alert(\"Sick notification was not successfull\");</script>";
+         echo "<script>alert(\"Krankmeldung konnte nicht erfolgreich abgesetzt werden\");</script>";
        }
      }
 
